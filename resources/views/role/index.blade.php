@@ -6,12 +6,10 @@
                     <h2>Role Management</h2>
                 </div>
                 <div class="pull-right">
-
                     <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
-
-                    @if (Auth::check())
-                        <a class="btn btn-success" href="{{ route('logoutSubmit') }}"> Logout</a>
-                    @endif           
+                    <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
+                    <a class="btn btn-success" href="{{ route('products.index') }}"> Products</a>
+                    <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
                 </div>
 
             </div>
@@ -21,13 +19,6 @@
                 <p>{{ $message }}</p>
             </div>
         @endif
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
-                <a class="btn btn-success" href="{{ route('products.index') }}"> Products</a>
-                <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
-            </div>
-        </div>
         <table class="table table-bordered">
             <tr>
                 <th>No</th>

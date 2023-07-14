@@ -18,7 +18,7 @@ class CheckLogout
     {
         if (Auth::check()) {
             Auth::logout();
-        }
+        }   
     
         return $next($request);
     }

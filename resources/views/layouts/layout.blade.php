@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quản trị website</title>
+    <title>Quản trị Website</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -90,8 +90,8 @@
     <!-- Logout Modal-->
     @include('admin.modal.logout')
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
-    <script src="https://cdn.ckbox.io/ckbox/1.5.1/ckbox.js"></script>
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckbox.io/ckbox/1.5.1/ckbox.js"></script> --}}
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

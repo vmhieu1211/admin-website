@@ -3,17 +3,13 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Laravel 8 CRUD Example from scratch - ItSolutionStuff.com</h2>
-            </div>
             <div class="pull-right">
                 @can('user-create')
                     <a class="btn btn-success" href="{{ route('users.create') }}"> Create New User</a>
+                    <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
+                    <a class="btn btn-success" href="{{ route('products.index') }}"> Products</a>
+                    <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
                 @endcan
-
-                @if (Auth::check())
-                    <a class="btn btn-success" href="{{ route('logoutSubmit') }}"> Logout</a>
-                @endif
 
             </div>
         </div>
@@ -25,13 +21,6 @@
         </div>
     @endif
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
-            <a class="btn btn-success" href="{{ route('products.index') }}"> Products</a>
-            <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
-        </div>
-    </div>
 
     <table class="table table-bordered">
         <tr>
