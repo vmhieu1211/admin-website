@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
+    
     @stack('stylesheet')
     <!-- day code css tu view con ra day -->
 </head>
@@ -56,6 +57,10 @@
                     <!-- Content Row -->
                     @yield('content_row')
 
+                    <!-- Content Index -->
+                    @yield('content')
+
+
                 </div>
                 <!-- /.container-fluid -->
 
@@ -85,6 +90,8 @@
     <!-- Logout Modal-->
     @include('admin.modal.logout')
 
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckbox.io/ckbox/1.5.1/ckbox.js"></script>
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

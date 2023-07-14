@@ -7,9 +7,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Traits\HasRoles;
+use App\Models\Product;
+
+
+
 
 class User extends Authenticatable
 {
+    use HasRoles;
+    // public function getRoleNames()
+    // {
+    //     return $this->roles->pluck('name');
+    // }
     use HasApiTokens, HasFactory, Notifiable;
 
     /**
@@ -42,4 +53,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function products()
+
+    {
+        return $this->hasMany(Product::class,'author');
+    }
 }

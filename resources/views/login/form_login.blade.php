@@ -1,7 +1,7 @@
-@extends('layouts.login_layout')
-@section('title_login','Admin-Login')
+@extends('layouts.login')
+@section('title_login', 'Admin-Login')
 @section('content_login')
-<div class="container">
+    <div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -26,39 +26,33 @@
                                                 </ul>
                                             </div>
                                         @endif
-                                        @if(Session::has('error_login'))
+                                        @if (Session::has('error_login'))
                                             <div class="alert alert-danger">
-                                                {{Session::get('error_login')}}
+                                                {{ Session::get('error_login') }}
                                             </div>
                                         @endif()
                                     </div>
-                                    <form class="user" method="POST" action="{{ route('admin.handle.login')}}">
+
+                                    <form class="user" method="POST" action="/login">
                                         @csrf
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
-                                                name="username">
+                                            <input type="text" class="form-control form-control-user" placeholder="Email" name="email">
                                         </div>
+
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
-                                        
-                                        
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">login</button>
-                                        
-                                        
+
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
                                     </form>
-                                    
-                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
-</div>
+    </div>
 @endsection
