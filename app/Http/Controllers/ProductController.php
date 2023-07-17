@@ -65,6 +65,7 @@ class ProductController extends Controller
         $product->images = $request->images;
         $product->author = $user->id;
 
+        
         // dd($product);
         $product->save();
         return redirect()->route('products.index')
@@ -72,33 +73,27 @@ class ProductController extends Controller
     }
 
 
-    /**
-     * Display the specified resource.
-     */
+    
     public function show(Product $product)
     {
         return view('products.show', compact('product'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+ 
 
     public function edit(Product $product)
     {
         return view('products.edit', compact('product'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
 
     public function update(Request $request, Product $product)
     {
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
-            // 'images' => 'image|mimes:jpeg,png,jpg,gif'
+            'images' => 'image|mimes:jpeg,png,jpg,gif'
         ]);
         $product->name = $request->name;
         $product->detail = $request->detail;

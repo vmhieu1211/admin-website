@@ -19,7 +19,7 @@ class AuthController extends Controller
                 [
                     'message' => 'User not exist'
                 ],
-                404
+                401
             );
         }
         $token = $user->createToken('authToken')->plainTextToken;
@@ -28,7 +28,7 @@ class AuthController extends Controller
                 'access_token' =>  $token,
                 'type_token' => 'Bearer'
             ],
-            404
+            200
         );
     }
 

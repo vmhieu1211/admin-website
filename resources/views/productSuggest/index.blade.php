@@ -10,6 +10,8 @@
 
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('products.index') }}"> Product</a>
+
                 <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
                 <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
                 <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>

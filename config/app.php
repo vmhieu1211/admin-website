@@ -170,8 +170,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
+        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
     ])->toArray(),
-    
+
 
     /*
     |--------------------------------------------------------------------------
@@ -186,7 +188,8 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
-        'Permission' => Spatie\Permission\Facades\Permission::class
+        'Permission' => Spatie\Permission\Facades\Permission::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
-   
+
 ];

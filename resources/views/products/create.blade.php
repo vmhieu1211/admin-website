@@ -44,7 +44,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <a id="lfm" data-input="images" data-preview="holder" class="btn btn-primary">
+                        <a id="file-manager" data-input="images" data-preview="holder" class="btn btn-primary">
                             <i class="fa fa-picture-o"></i> Choose
                         </a>
                     </span>
@@ -61,12 +61,24 @@
 @endsection
 
 @push('scripts')
-    <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
+    <script src="{{ asset('vendor/laravel-filemanager/js/filemanager.js') }}"></script>
     <script>
         ClassicEditor
             .create(document.querySelector('#my-editor'))
             .catch(error => {
                 console.error(error);
             });
+        $(document).ready(function() {
+            $('#file-manager').click(function() {
+                lfm({
+                    prefix: '/laravel-filemanager',
+                    id: 'images',
+                    height: 600,
+                    width: 900,
+                    single: false,
+                });
+            });
+        });
     </script>
 @endpush
