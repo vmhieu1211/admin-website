@@ -55,7 +55,7 @@ class UserController extends Controller
         $roles = $request->input('roles', []);
         $user->assignRole($roles);
 
-        // dispatch(new ProcessRequestJob($user))->delay(now()->addSeconds(10));
+        dispatch(new ProcessRequestJob($user))->delay(now()->addSeconds(10));
 
 
         return redirect()->route('users.index')

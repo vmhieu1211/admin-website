@@ -37,7 +37,7 @@
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
                     <strong>Detail:</strong>
-                    <textarea id="my-editor" class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea></textarea>
+                    <textarea id="my-editor" class="form-control" style="height: 150px;" name="detail" placeholder="Detail">{{ old('detail', $product->detail ?? '') }}</textarea>
                 </div>
             </div>
 
@@ -59,9 +59,14 @@
         </div>
     </form>
 @endsection
+
 @push('scripts')
-    <script src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/30.0.0/classic/ckeditor.js"></script>
     <script>
-        CKEDITOR.replace('my-editor');
+        ClassicEditor
+            .create(document.querySelector('#my-editor'))
+            .catch(error => {
+                console.error(error);
+            });
     </script>
 @endpush

@@ -6,6 +6,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductSuggestController;
+use App\Http\Controllers\SuggestController;
+
+ 
 
 /*
 |--------------------------------------------------------------------------
@@ -30,12 +34,14 @@ Route::group(['middleware' => 'CheckLogout'], function () {
     Route::post('/logout', [LoginController::class, 'logoutSubmit'])->name('logoutSubmit');
 });
 
-// Route::middleware(['CheckLogin'])->group(function () {
+Route::middleware(['CheckLogin'])->group(function () {
 Route::resource('users', UserController::class);
 Route::resource('products', ProductController::class);
 Route::resource('roles', RoleController::class);
 Route::resource('permissions', PermissionController::class);
-// });
+Route::resource('suggests', SuggestController::class);
+Route::resource('productSuggest',ProductSuggestController::class);
+});
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();

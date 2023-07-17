@@ -6,10 +6,12 @@
                     <h2>Role Management</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('roles.create') }}"> Create New Role</a>
+                    <a class="btn btn-success" href="{{ route('productSuggest.create') }}"> Create New Product Suggest</a>
                     <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
-                    <a class="btn btn-success" href="{{ route('products.index') }}"> Products</a>
+                    <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
                     <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
+                    <a class="btn btn-success" href="{{ route('suggests.index') }}"> Suggest</a>
+                    <a class="btn btn-success" href="{{ route('productSuggest.index') }}"> Product Suggest</a>
                 </div>
 
             </div>

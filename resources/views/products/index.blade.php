@@ -9,9 +9,8 @@
                 <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
                 <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
                 <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
-                @if (Auth::check())
-                    <a class="btn btn-success" href="{{ route('logoutSubmit') }}"> Logout</a>
-                @endif
+                <a class="btn btn-success" href="{{ route('suggests.index') }}"> Suggest</a>
+                <a class="btn btn-success" href="{{ route('productSuggest.index') }}"> Product Suggest</a>
             </div>
         </div>
     </div>
@@ -79,7 +78,6 @@
                     @endif
                 </td>
 
-
                 <td>
                     @if ($product->images)
                         <img alt="" style="max-width: 150px; margin-bottom: 10px;" src="{{ $product->images }}">
@@ -91,7 +89,7 @@
                     <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                         <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">Show</a>
                         {{-- @can('product-edit') --}}
-                            <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
                         {{-- @endcan --}}
                         @csrf
                         @method('DELETE')

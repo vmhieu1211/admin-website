@@ -169,13 +169,9 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
-        Collective\Html\HtmlServiceProvider::class,
-        UniSharp\LaravelFilemanager\LaravelFilemanagerServiceProvider::class,
-        CKSource\CKEditor\CKEditorServiceProvider::class,
     ])->toArray(),
-
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -189,7 +185,8 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
-        'Filemanager' => UniSharp\LaravelFilemanager\Facades\Lfm::class,
+        // 'Example' => App\Facades\Example::class,
+        'Permission' => Spatie\Permission\Facades\Permission::class
     ])->toArray(),
-
+   
 ];
