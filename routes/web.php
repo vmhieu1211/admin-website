@@ -43,6 +43,6 @@ Route::resource('suggests', SuggestController::class);
 Route::resource('productSuggest',ProductSuggestController::class);
 });
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web' ]], function () {
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });

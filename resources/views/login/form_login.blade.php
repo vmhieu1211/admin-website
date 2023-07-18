@@ -36,7 +36,8 @@
                                     <form class="user" method="POST" action="/login">
                                         @csrf
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" placeholder="Email" name="email">
+                                            <input type="text" class="form-control form-control-user" placeholder="Email"
+                                                name="email">
                                         </div>
 
                                         <div class="form-group">

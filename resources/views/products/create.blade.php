@@ -70,7 +70,7 @@
                 console.error(error);
             });
             document.getElementById('file-manager').addEventListener('click', function () {
-                lfm({
+                filemanager({
                     prefix: '/laravel-filemanager',
                     id: 'images',
                     height: 600,
