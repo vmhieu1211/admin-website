@@ -5,18 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Manager Product</h2>
-            </div>
-
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('products.create') }}"> Create New Product</a>
-                <a class="btn btn-success" href="{{ route('products.index') }}"> Product</a>
-
-                <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
-                <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
-                <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
-                <a class="btn btn-success" href="{{ route('suggests.index') }}"> Suggest</a>
-                <a class="btn btn-success" href="{{ route('productSuggest.index') }}"> Product Suggest</a>
+                <h2>Manager Asset</h2>
             </div>
         </div>
     </div>
@@ -56,9 +45,9 @@
                 <td>{{ ($product->money * $product->depreciation_rate) / 100 }}</td>
 
                 <td>
-                    <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                    <form action="{{ route('devices.destroy', $product->id) }}" method="POST">
+                        <a class="btn btn-info" href="{{ route('devices.show', $product->id) }}">Show</a>
+                        <a class="btn btn-primary" href="{{ route('devices.edit', $product->id) }}">Edit</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>

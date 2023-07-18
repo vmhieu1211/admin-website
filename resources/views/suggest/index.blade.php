@@ -7,15 +7,6 @@
             <div class="pull-left">
                 <h2>Manager Suggest</h2>
             </div>
-
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('suggests.create') }}"> Create New Suggest</a>
-                <a class="btn btn-success" href="{{ route('users.index') }}"> User</a>
-                <a class="btn btn-success" href="{{ route('roles.index') }}"> Role</a>
-                <a class="btn btn-success" href="{{ route('permissions.index') }}"> Permission</a>
-                <a class="btn btn-success" href="{{ route('suggests.index') }}"> Suggest</a>
-                <a class="btn btn-success" href="{{ route('productSuggest.index') }}"> Product Suggest</a>
-            </div>
         </div>
     </div>
 
