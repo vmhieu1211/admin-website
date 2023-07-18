@@ -69,8 +69,7 @@
             .catch(error => {
                 console.error(error);
             });
-        $(document).ready(function() {
-            $('#file-manager').click(function() {
+            document.getElementById('file-manager').addEventListener('click', function () {
                 lfm({
                     prefix: '/laravel-filemanager',
                     id: 'images',
@@ -79,6 +78,5 @@
                     single: false,
                 });
             });
-        });
     </script>
 @endpush

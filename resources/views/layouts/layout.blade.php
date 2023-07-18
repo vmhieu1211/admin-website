@@ -102,9 +102,6 @@
     @include('admin.modal.logout')
 
     
-    <script src="{{ asset('vendor/laravel-filemanager/js/filemanager.js') }}"></script>
-  
- 
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
