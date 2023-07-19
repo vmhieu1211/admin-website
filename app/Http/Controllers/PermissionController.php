@@ -16,11 +16,11 @@ class PermissionController extends Controller
         $this->middleware('permission:permission-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:permission-create', ['only' => ['create']]);
     }
-
+    
 
     public function index(Request $request)
     {
-        $permissions = Permission::latest()->paginate(20);
+        $permissions = Permission::orderBy('name')->get();
         return view('permissions.index', compact('permissions'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
@@ -45,6 +45,12 @@ class PermissionController extends Controller
 
         return redirect()->route('permissions.index')
             ->with('success', 'Permission created successfully');
+    }
+
+    public function show($id)
+    {
+        $permissions = Permission::find($id);
+        return view('permissions.show', compact('permissions'));
     }
 
     public function edit($id)

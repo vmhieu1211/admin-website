@@ -9,8 +9,8 @@ class DeviceController extends Controller
 {
     public function index()
     {
-        $products = Device::all();
-        return view('device.index', compact('products'));
+        $devices = Device::all();
+        return view('device.index', compact('devices'));
     }
 
     public function create()
@@ -53,7 +53,7 @@ class DeviceController extends Controller
 
     public function edit(Device $device)
     {
-        return view('device.edit', compact('product'));
+        return view('device.edit', compact('device'));
     }
 
     public function update(Request $request, Device $device)

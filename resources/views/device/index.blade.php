@@ -30,24 +30,24 @@
             <th>Depreciation Amount</th>
             <th width="280px">Action</th>
         </tr>
-        @foreach ($products as $product)
+        @foreach ($devices as $device)
             <tr>
-                <td>{{ $product->id }}</td>
-                <td>{{ $product->name }}</td>
-                <td>{{ $product->amount }}</td>
-                <td>{{ $product->money }}</td>
-                <td>{{ $product->department }}</td>
-                <td>{{ $product->status }}</td>
-                <td>{{ $product->purchase_date }}</td>
-                <td>{{ $product->delivery_date }}</td>
-                <td>{{ $product->personDelivery->name }}</td>
-                <td>{{ $product->depreciation_rate }}</td>
-                <td>{{ ($product->money * $product->depreciation_rate) / 100 }}</td>
+                <td>{{ $device->id }}</td>
+                <td>{{ $device->product_name }}</td>
+                <td>{{ $device->amount }}</td>
+                <td>{{ $device->money }}</td>
+                <td>{{ $device->department }}</td>
+                <td>{{ $device->status }}</td>
+                <td>{{ $device->purchase_date }}</td>
+                <td>{{ $device->delivery_date }}</td>
+                <td>{{ $device->personDelivery->name }}</td>
+                <td>{{ $device->depreciation_rate }}</td>
+                <td>{{ ($device->money * $device->depreciation_rate) / 100 }}</td>
 
                 <td>
-                    <form action="{{ route('devices.destroy', $product->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('devices.show', $product->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('devices.edit', $product->id) }}">Edit</a>
+                    <form action="{{ route('devices.destroy', $device->id) }}" method="POST">
+                        <a class="btn btn-info" href="{{ route('devices.show', $device->id) }}">Show</a>
+                        <a class="btn btn-primary" href="{{ route('devices.edit', $device->id) }}">Edit</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>

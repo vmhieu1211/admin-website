@@ -16,55 +16,55 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Name:</strong>
-                {{ $product->name }}
+                {{ $device->product_name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Amount:</strong>
-                {{ $product->amount }}
+                {{ $device->amount }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Money:</strong>
-                {{ $product->money }}
+                {{ $device->money }}
             </div>
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Department:</strong>
-                {{ $product->department }}
+                {{ $device->department }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Purchase Date:</strong>
-                {{ $product->purchase_date }}
+                {{ $device->purchase_date }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Delivery Date:</strong>
-                {{ $product->delivery_date }}
+                {{ $device->delivery_date }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Person delivery:</strong>
-                {{ $product->person_delivery_id }}
+                {{ $device->person_delivery_id }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Depreciation Rate:</strong>
-                {{ $product->depreciation_rate }}
+                {{ $device->depreciation_rate }}
             </div>
         </div>
     </div>

@@ -33,16 +33,17 @@
                     @endforeach
                 </td>
                 <td>
+                    <a class="btn btn-info" href="{{ route('permissions.show', $permission->id) }}">Show</a>
+                    @can('permission-edit')
                     <a class="btn btn-primary" href="{{ route('permissions.edit', $permission->id) }}">Edit</a>
-
-                    {!! Form::open([
-                        'method' => 'DELETE',
-                        'route' => ['permissions.destroy', $permission->id],
-                        'style' => 'display:inline',
-                    ]) !!}
-                    {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                    {!! Form::close() !!}
-
+                    @endcan
+                    @can('permission-delete')
+                    <form method="POST" action="{{ route('permissions.destroy', $permission->id) }}" style="display:inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    @endcan
                 </td>
             </tr>
         @endforeach
