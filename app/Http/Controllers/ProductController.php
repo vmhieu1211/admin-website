@@ -5,16 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Models\Role;
-use Spatie\Permission\Models\Permission;
-
-
-
 
 class ProductController extends Controller
 {
-
     function __construct()
     {
         $this->middleware('permission:product-list|product-create|product-edit|product-delete', ['only' => ['index', 'show']]);
@@ -23,10 +16,9 @@ class ProductController extends Controller
         $this->middleware('permission:product-delete', ['only' => ['destroy']]);
     }
 
-
     public function index()
     {
-        $products = Product::latest()->paginate(5);
+        $products = Product::All();
         // foreach($products as $product){
         //     dd($product->user);
         // }
@@ -34,18 +26,13 @@ class ProductController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+  
     public function create()
 
     {
         return view('products.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate(
@@ -55,9 +42,7 @@ class ProductController extends Controller
             ]
         );
         $user = Auth::user();
-
         $product = new Product();
-
         $product->name = $request->name;
         $product->detail = $request->detail;
         $product->images = $request->images;
@@ -70,14 +55,10 @@ class ProductController extends Controller
             ->with('success', 'Product created successfully.');
     }
 
-
-    
     public function show(Product $product)
     {
         return view('products.show', compact('product'));
     }
-
- 
 
     public function edit(Product $product)
     {
@@ -91,7 +72,7 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required',
             'detail' => 'required',
-            'images' => 'image|mimes:jpeg,png,jpg,gif'
+            // 'images' => 'image|mimes:jpeg,png,jpg,gif'
         ]);
         $product->name = $request->name;
         $product->detail = $request->detail;
@@ -102,9 +83,6 @@ class ProductController extends Controller
             ->with('success', 'Product updated successfully.');
     } 
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Product $product)
     {
         $product->delete();
