@@ -26,7 +26,7 @@ class ProductController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-  
+
     public function create()
 
     {
@@ -48,7 +48,7 @@ class ProductController extends Controller
         $product->images = $request->images;
         $product->author = $user->id;
 
-        
+
         // dd($product);
         $product->save();
         return redirect()->route('products.index')
@@ -65,7 +65,7 @@ class ProductController extends Controller
         return view('products.edit', compact('product'));
     }
 
-    
+
 
     public function update(Request $request, Product $product)
     {
@@ -81,7 +81,7 @@ class ProductController extends Controller
 
         return redirect()->route('products.index')
             ->with('success', 'Product updated successfully.');
-    } 
+    }
 
     public function destroy(Product $product)
     {
