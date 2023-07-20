@@ -21,7 +21,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
 
-    <li class="nav-item">
+    <li class="nav-item menu-item" >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
             aria-expanded="true" aria-controls="collapseUser">
             <i class="fas fa-fw fa-cog"></i>
@@ -35,7 +35,7 @@
         </div>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item menu-item" >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRole"
             aria-expanded="true" aria-controls="collapseRole">
             <i class="fas fa-fw fa-cog"></i>
@@ -49,8 +49,8 @@
         </div>
     </li>
 
-    
-    <li class="nav-item">
+
+    <li class="nav-item menu-item" >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePermission"
             aria-expanded="true" aria-controls="collapsePermission">
             <i class="fas fa-fw fa-cog"></i>
@@ -64,7 +64,7 @@
         </div>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item menu-item" >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct"
             aria-expanded="true" aria-controls="collapseProduct">
             <i class="fas fa-fw fa-list"></i>
@@ -79,7 +79,7 @@
         </div>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item menu-item" >
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSuggest"
             aria-expanded="true" aria-controls="collapseSuggest">
             <i class="fas fa-fw fa-list"></i>
@@ -94,11 +94,11 @@
         </div>
     </li>
 
-    <li class="nav-item">
+    <li class="nav-item menu-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDevice"
-            aria-expanded="true" aria-controls="collapseDevice">
+            aria-expanded="true" aria-controls="collapseDevice" >
             <i class="fas fa-fw fa-list"></i>
-            <span>Quản lý thiết bị</span>
+            <span>Quản lý thiết bị</>
         </a>
         <div id="collapseDevice" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -108,31 +108,6 @@
             </div>
         </div>
     </li>
-
-    {{-- <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSlider"
-            aria-expanded="true" aria-controls="collapseSlider">
-            <i class="fas fa-fw fa-bars"></i>
-            <span>Slider</span>
-        </a>
-        <div id="collapseSlider" class="collapse" aria-labelledby="headingPost" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="Slider-color.html">Colors</a>
-                <a class="collapse-item" href="Slider-border.html">Borders</a>
-                <a class="collapse-item" href="Slider-animation.html">Animations</a>
-                <a class="collapse-item" href="Slider-other.html">Other</a>
-            </div>
-        </div>
-    </li> --}}
-
-    {{-- <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Cài đặt</span></a>
-    </li> --}}
-
-
-    <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>

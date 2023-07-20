@@ -94,7 +94,7 @@
     <!-- Logout Modal-->
     @include('admin.modal.logout')
 
-    
+
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -104,7 +104,8 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('admin/js/sb-admin-2.min.js') }}"></script>
-
+    <script src="{{ asset('admin/js/sb-admin-2.js') }}"></script>
+    
     <!-- Page level plugins -->
     <!-- <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script> -->
 

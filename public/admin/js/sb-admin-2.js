@@ -48,9 +48,24 @@
   $(document).on('click', 'a.scroll-to-top', function(e) {
     var $anchor = $(this);
     $('html, body').stop().animate({
-      scrollTop: ($($anchor.attr('href')).offset().top)
+      scrollTop: ($($anchor.attr('href')).offset().top) 
     }, 1000, 'easeInOutExpo');
     e.preventDefault();
+  });
+
+  
+  $(document).on("mouseover", ".nav-item", function() {
+    var collapseMenu = $(this).siblings(".collapse");
+    if (collapseMenu.length) {
+      collapseMenu.addClass("show");
+    }
+  });
+
+  $(document).on("mouseleave", ".nav-item", function() {
+    var collapseMenu = $(this).siblings(".collapse");
+    if (collapseMenu.length) {
+      collapseMenu.removeClass("show");
+    }
   });
 
 })(jQuery); // End of use strict
