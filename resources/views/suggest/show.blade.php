@@ -7,7 +7,7 @@
                 <h2> Show Suggest</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('suggests.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('suggests.index') }}"> {{__('welcome.back')}}</a>
             </div>
         </div>
     </div>
@@ -15,62 +15,62 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
+                <strong>{{__('welcome.product_name')}}:</strong>
                 {{ $suggest->products_name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Amount:</strong>
+                <strong>{{__('welcome.amount')}}:</strong>
                 {{ $suggest->amount }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Money:</strong>
+                <strong>{{__('welcome.money')}}:</strong>
                 {{ $suggest->money }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Type:</strong>
+                <strong>{{__('welcome.type')}}:</strong>
                 {{ $suggest->suggest_type }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Asset Type:</strong>
+                <strong>{{__('welcome.asset_type')}}:</strong>
                 {{ $suggest->asset_type }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Person Suggest:</strong>
+                <strong>{{__('welcome.person_suggest')}}:</strong>
                 {{ $suggest->person_suggest_id }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Department Suggest:</strong>
+                <strong>{{__('welcome.department_suggest')}}:</strong>
                 {{ $suggest->department_suggest }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Suggest Date:</strong>
+                <strong>{{__('welcome.suggest_date')}}:</strong>
                 {{ $suggest->suggest_date }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Status:</strong>
+                <strong>{{__('welcome.status')}}:</strong>
                 {{ $suggest->status }}
             </div>
         </div>

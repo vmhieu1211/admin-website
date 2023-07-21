@@ -51,12 +51,12 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Details</th>
-            <th>Date</th>
-            <th>Author</th>
-            <th>Image used</th>
+            <th>{{__('welcome.no')}}</th>
+            <th>{{__('welcome.product_name')}}</th>
+            <th>{{__('welcome.detail')}}</th>
+            <th>{{__('welcome.date')}}</th>
+            <th>{{__('welcome.author')}}</th>
+            <th>{{__('welcome.image')}}</th>
             <th width="280px">{{ __('welcome.action') }}</th>
 
         </tr>
@@ -84,16 +84,16 @@
                 </td>
                 <td>
                     <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">{{__('welcome.show')}}</a>
                         {{-- @can('product-edit') --}}
-                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">{{__('welcome.edit')}}</a>
                         {{-- @endcan --}}
 
                         @can('product-delete')
                             <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger">{{__('welcome.delete')}}</button>
                             </form>
                         @endcan
                     </form>

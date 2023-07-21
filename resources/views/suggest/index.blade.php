@@ -17,16 +17,16 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Product</th>
-            <th>Amount</th>
-            <th>Money</th>
-            <th>Type</th>
-            <th>Asset Type</th>
-            <th>Person Suggest</th>
-            <th>Department Suggest</th>
-            <th>Suggest Date</th>
-            <th>Status</th>
+            <th>{{__('welcome.no')}}</th>
+            <th>{{__('welcome.product_name')}}</th>
+            <th>{{__('welcome.amount')}}</th>
+            <th>{{__('welcome.money')}}</th>
+            <th>{{__('welcome.type')}}</th>
+            <th>{{__('welcome.asset_type')}}</th>
+            <th>{{__('welcome.person_suggest')}}</th>
+            <th>{{__('welcome.department_suggest')}}</th>
+            <th>{{__('welcome.suggest_date')}}</th>
+            <th>{{__('welcome.status')}}</th>
             <th width="280px">{{__('welcome.action')}}</th>
 
         </tr>
@@ -44,11 +44,11 @@
                 <td>{{ $suggests->status }}</td>
                 <td>
                     <form action="{{ route('suggests.destroy', $suggests->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('suggests.show', $suggests->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('suggests.edit', $suggests->id) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('suggests.show', $suggests->id) }}">{{__('welcome.show')}}</a>
+                        <a class="btn btn-primary" href="{{ route('suggests.edit', $suggests->id) }}">{{__('welcome.edit')}}</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">{{__('welcome.delete')}}</button>
                     </form>
                 </td>
             </tr>

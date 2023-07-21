@@ -6,7 +6,7 @@
                 <h2>Edit Suggest</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('suggests.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('suggests.index') }}"> {{__('welcome.back')}}</a>
             </div>
         </div>
     </div>
@@ -29,21 +29,21 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Product:</strong>
+                    <strong>{{__('welcome.product_name')}}:</strong>
                     <input type="text" name="products_name" value="{{ $suggest->products_name }}" class="form-control"
                         placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Amount:</strong>
+                    <strong>{{__('welcome.amount')}}:</strong>
                     <input type="text" name="amount" value="{{ $suggest->amount }}" class="form-control"
                         placeholder="Amount">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Money:</strong>
+                    <strong>{{__('welcome.money')}}:</strong>
                     <input type="text" name="money" value="{{ $suggest->money }}" class="form-control"
                         placeholder="Money">
                 </div>
@@ -51,17 +51,17 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Type:</strong>
+                    <strong>{{__('welcome.suggest_type')}}:</strong>
                     <select name="suggest_type" class="form-control" required>
-                        <option value="buy">Mua</option>
-                        <option value="sell">Bán</option>
+                        <option value="buy">{{__('welcome.buy')}}</option>
+                        <option value="sell">{{__('welcome.sell')}}</option>
                     </select>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Asset Type:</strong>
+                    <strong>{{__('welcome.asset_type')}}:</strong>
                     <select name="asset_type" class="form-control" required>
                         <option value="Computer">Máy tính</option>
                         <option value="Hardware devices">Thiết bị</option>
@@ -73,7 +73,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Department Suggest:</strong>
+                    <strong>{{__('welcome.department_suggest')}}:</strong>
                     <select name="department_suggest" class="form-control" required>
                         <option value="Dev Team">Dev Team</option>
                         <option value="Marketing">Marketing</option>
@@ -83,14 +83,14 @@
 
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
-                    <strong>Suggest Date:</strong>
+                    <strong>{{__('welcome.suggest_date')}}:</strong>
                     <input type="date" name="suggest_date" class="form-control" placeholder="Suggest Date" required>
                 </div>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
-                    <strong>Person Suggest:</strong>
+                    <strong>{{__('welcome.person_suggest')}}:</strong>
                     <input type="text" name="person_suggest_id" class="form-control" placeholder="Person Suggest"
                         required>
                 </div>
@@ -98,16 +98,16 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Status:</strong>
+                    <strong>{{__('welcome.status')}}:</strong>
                     <select name="status" class="form-control" required>
-                        <option value="not_approved">Not aprroved</option>
-                        <option value="approved">Approved</option>
-                        <option value="done">Done</option>
+                        <option value="not_approved">{{__('welcome.not_approved')}}</option>
+                        <option value="approved">{{__('welcome.approved')}}</option>
+                        <option value="done">{{__('welcome.done')}}</option>
                     </select>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">{{__('welcome.submit')}}</button>
             </div>
         </div>
     </form>

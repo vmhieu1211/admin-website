@@ -16,6 +16,14 @@ return [
     'no' => 'STT',
     'submit'=>'Xác nhận',
     'image'=>'Ảnh',
+    'choose'=>'Chọn',
+    'not_approved'=>'Chưa duyệt',
+    'approved'=>'Đã duyệt',
+    'done'=>'Đã hoàn thành',
+    'buy'=>'Mua',
+    'sell'=>'Bán',
+    'using'=>'Đang dùng',
+    'storage'=>'Lưu kho',
 
     //user
     'user' => 'Người dùng',
@@ -23,7 +31,7 @@ return [
     'user_create' => 'Tạo mới người dùng',
     'user_name' => 'Tên tài khoản',
     'user_products' => 'Sản phẩm',
-    'user_password' => 'Mật khẩu',
+    'password' => 'Mật khẩu',
 
     //role
     'role' => 'Vai trò',
@@ -41,16 +49,35 @@ return [
     'product' => 'Sản phẩm',
     'product_list' => 'Danh sách sản phẩm',
     'product_create' => 'Tạo mới sản phẩm',
+    'product_name'=>'Tên sản phẩm',
+    'detail'=>'Chi tiết',
+    'date'=>'Ngày',
+    
 
     //suggest
     'suggest' => 'Quản lý đề xuất',
     'suggest_list' => 'Danh sách đề xuất',
     'suggest_create' => 'Tạo mới đề xuất',
+    'amount'=>'Số lượng',
+    'money'=>'Giá tiền',
+    'type'=>'Loại đề xuất',
+    'asset_type'=>'Loại tài sản',
+    'person_suggest'=>'Người đề xuất',
+    'department_suggest'=>'Bộ phận đề xuất',
+    'suggest_date'=>'Ngày đề xuất',
+    'status'=>'Trạng thái',
 
     //device
     'device' => 'Quản lý thiết bị',
     'device_list' => 'Danh sách thiết bị',
     'device_create' => 'Tạo mới thiết bị',
+    'device_name'=>'Tên thiết bị',
+    'department'=>'Bộ phận',
+    'purchase_date'=>'Ngày mua',
+    'delivery_date'=>'Ngày nhận',
+    'person_delivery'=>'Người nhận',
+    'depreciation_rate'=>'Khấu hao',
+    'depreciation_amount'=>'Số tiền khấu hao',
    
 
 ];

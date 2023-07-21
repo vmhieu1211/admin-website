@@ -29,14 +29,14 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Product:</strong>
+                    <strong>{{__('welcome.product_name')}}:</strong>
                     <input type="text" name="products_name" class="form-control" placeholder="Product">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Amount:</strong>
+                    <strong>{{__('welcome.amount')}}:</strong>
                     <input type="text" name="amount" class="form-control" placeholder="Amount">
                 </div>
             </div>
@@ -50,17 +50,17 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Type:</strong>
+                    <strong>{{__('welcome.type')}}:</strong>
                     <select name="suggest_type" class="form-control" required>
-                        <option value="buy">Buy</option>
-                        <option value="sell">Sell</option>
+                        <option value="buy">{{__('welcome.buy')}}</option>
+                        <option value="sell">{{__('welcome.sell')}}</option>
                     </select>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Asset Type:</strong>
+                    <strong>{{__('welcome.asset_type')}}:</strong>
                     <select name="asset_type" class="form-control" required>
                         <option value="Computer">Máy tính</option>
                         <option value="Hardware     devices">Thiết bị phần cứng</option>
@@ -72,7 +72,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Department Suggest:</strong>
+                    <strong>{{__('welcome.department_suggest')}}:</strong>
                     <select name="department_suggest" class="form-control" required>
                         <option value="Dev Team">Dev Team</option>
                         <option value="Marketing">Marketing</option>
@@ -82,32 +82,32 @@
 
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
-                    <strong>Suggest Date:</strong>
+                    <strong>{{__('welcome.suggest_date')}}:</strong>
                     <input type="date" name="suggest_date" class="form-control" placeholder="Suggest Date" required>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Status:</strong>
+                    <strong>{{__('welcome.status')}}:</strong>
                     <select name="status" class="form-control" required>
-                        <option value="not_approved">Not aprroved</option>
-                        <option value="approved">Approved</option>
-                        <option value="done">Done</option>
+                        <option value="not_approved">{{__('welcome.not_approved')}}</option>
+                        <option value="approved">{{__('welcome.approved')}}</option>
+                        <option value="done">{{__('welcome.done')}}</option>
                     </select>
                 </div>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
-                    <strong>Person Suggest:</strong>
+                    <strong>{{__('welcome.person_suggest')}}:</strong>
                     <input type="text" name="person_suggest_id" class="form-control" placeholder="Person Suggest"
                         required>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">{{__('welcome.submit')}}</button>
             </div>
         </div>
     </form>

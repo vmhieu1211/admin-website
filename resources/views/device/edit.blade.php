@@ -6,7 +6,7 @@
                 <h2>Edit device</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('devices.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('devices.index') }}"> {{__('welcome.back')}}</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>{{__('welcome.device_name')}}:</strong>
                     <input type="text" name="product_name" value="{{ $device->product_name }}" class="form-control"
                         placeholder="Name">
                 </div>
@@ -37,7 +37,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Amount:</strong>
+                    <strong>{{__('welcome.amount')}}:</strong>
                     <input type="text" name="amount" value="{{ $device->amount }}" class="form-control"
                         placeholder="Amount">
                 </div>
@@ -45,7 +45,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Money:</strong>
+                    <strong>{{__('welcome.money')}}:</strong>
                     <input type="text" name="money" value="{{ $device->money }}" class="form-control"
                         placeholder="Money">
                 </div>
@@ -53,7 +53,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Department:</strong>
+                    <strong>{{__('welcome.department')}}:</strong>
                     <select name="department" class="form-control" required>
                         <option value="Dev Team">Dev Team</option>
                         <option value="Marketing">Marketing</option>
@@ -63,31 +63,31 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Status:</strong>
+                    <strong>{{__('welcome.status')}}:</strong>
                     <select name="status" class="form-control" required>
-                        <option value="using">Using</option>
-                        <option value="storage">Storage</option>
+                        <option value="using">{{__('welcome.using')}}</option>
+                        <option value="storage">{{__('welcome.storage')}}</option>
                     </select>
                 </div>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
-                    <strong>Purchase Date:</strong>
+                    <strong>{{__('welcome.purchase_date')}}:</strong>
                     <input type="date" name="purchase_date" class="form-control" placeholder="Purchase Date" required>
                 </div>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-12">
                 <div class="form-group">
-                    <strong>Delivery Date:</strong>
+                    <strong>{{__('welcome.delivery_date')}}:</strong>
                     <input type="date" name="delivery_date" class="form-control" placeholder="Delivery Date" required>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Person Delivery ID:</strong>
+                    <strong>{{__('welcome.person_delivery')}}:</strong>
                     <input type="text" name="person_delivery_id" class="form-control" placeholder="Person Delivery ID"
                         required>
                 </div>
@@ -95,14 +95,14 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Depreciation rate:</strong>
+                    <strong>{{__('welcome.depreciation_rate')}}:</strong>
                     <input type="text" name="depreciation_rate" class="form-control" placeholder="Depreciation rate"
                         required>
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">{{__('welcome.submit')}}</button>
             </div>
         </div>
     </form>

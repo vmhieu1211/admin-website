@@ -19,7 +19,7 @@
         <tr>
             <th>{{__('welcome.no')}}</th>
             <th>{{__('welcome.permission_name')}}</th>
-            <th>{{__('welcome.role_name')}}</th>
+            <th>{{__('welcome.role')}}</th>
             <th width="280px">{{__('welcome.action')}}</th>
         </tr>
 

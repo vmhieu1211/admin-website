@@ -21,14 +21,14 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Details:</strong>
+                <strong>{{__('welcome.detail')}}:</strong>
                 {{ $product->detail }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Product Image:</strong>
+                <strong>{{__('welcome.image')}}:</strong>
                 <img alt="" style="max-width: 700px; margin-bottom: 10px;">
             </div>
         </div>

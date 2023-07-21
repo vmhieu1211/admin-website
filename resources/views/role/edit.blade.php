@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Role</h2>
+                <h2></h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('roles.index') }}"> {{ __('welcome.back') }}</a>
@@ -25,13 +25,13 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
+                <strong> {{ __('welcome.role_name') }}:</strong>
                 {!! Form::text('name', null, ['placeholder' => 'Name', 'class' => 'form-control']) !!}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Permission:</strong>
+                <strong> {{ __('welcome.permission') }}:</strong>
                 <br />
                 @foreach ($permission as $value)
                     <label>{{ Form::checkbox('permission[]', $value->id, in_array($value->id, $rolePermissions) ? true : false, ['class' => 'name']) }}
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary"> {{ __('welcome.submit') }}</button>
         </div>
     </div>
     {!! Form::close() !!}

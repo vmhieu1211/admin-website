@@ -17,18 +17,18 @@
     @endif
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Money</th>
-            <th>Department</th>
-            <th>Status</th>
-            <th>Purchase Date</th>
-            <th>Delevery Date</th>
-            <th>Person Delivery</th>
-            <th>Depreciation rate</th>
-            <th>Depreciation Amount</th>
-            <th width="280px">Action</th>
+            <th>{{__('welcome.no')}}</th>
+            <th>{{__('welcome.device_name')}}</th>
+            <th>{{__('welcome.amount')}}</th>
+            <th>{{__('welcome.money')}}</th>
+            <th>{{__('welcome.department')}}</th>
+            <th>{{__('welcome.status')}}</th>
+            <th>{{__('welcome.purchase_date')}}</th>
+            <th>{{__('welcome.delivery_date')}}</th>
+            <th>{{__('welcome.person_delivery')}}</th>
+            <th>{{__('welcome.depreciation_rate')}}</th>
+            <th>{{__('welcome.depreciation_amount')}}</th>
+            <th width="280px">{{__('welcome.action')}}</th>
         </tr>
         @foreach ($devices as $device)
             <tr>

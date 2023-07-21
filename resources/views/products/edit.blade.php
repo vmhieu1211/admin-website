@@ -37,7 +37,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Detail:</strong>
+                    <strong>{{__('welcome.detail')}}:</strong>
                     <textarea id="my-editor" class="form-control" style="height:150px" name="detail" placeholder="Detail">{!! $product->detail !!}</textarea>
 
                 </div>
@@ -46,7 +46,7 @@
                 <div class="input-group">
                     <span class="input-group-btn">
                         <a id="lfm" data-input="images" data-preview="holder" class="btn btn-primary">
-                            <i class="fa fa-picture-o"></i> Choose
+                            <i class="fa fa-picture-o"></i> {{__('welcome.choose')}}
                         </a>
                     </span>
                     <input id="images" class="form-control" type="text" name="images">

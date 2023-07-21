@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>{{__('welcome.user_password')}}:</strong>
+                    <strong>{{__('welcome.password')}}:</strong>
                     <input class="form-control" style="height:40px" name="password" placeholder="" value="{!!$user->password !!}">
                 </div>
             </div>

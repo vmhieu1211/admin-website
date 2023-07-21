@@ -7,7 +7,7 @@
                 <h2> Show Product</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('devices.index') }}"> {{__('welcome.back')}}</a>
             </div>
         </div>
     </div>
@@ -15,55 +15,61 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
+                <strong>{{__('welcome.device_name')}}:</strong>
                 {{ $device->product_name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Amount:</strong>
+                <strong>{{__('welcome.amount')}}:</strong>
                 {{ $device->amount }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Money:</strong>
+                <strong>{{__('welcome.money')}}:</strong>
                 {{ $device->money }}
             </div>
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Department:</strong>
+                <strong>{{__('welcome.department')}}:</strong>
                 {{ $device->department }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>{{__('welcome.status')}}:</strong>
+                {{ $device->status }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Purchase Date:</strong>
+                <strong>{{__('welcome.status')}}:</strong>
                 {{ $device->purchase_date }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Delivery Date:</strong>
+                <strong>{{__('welcome.purchase_date')}}:</strong>
                 {{ $device->delivery_date }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Person delivery:</strong>
+                <strong>{{__('welcome.delivery_date')}}:</strong>
                 {{ $device->person_delivery_id }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Depreciation Rate:</strong>
+                <strong>{{__('welcome.depreciation_rate')}}:</strong>
                 {{ $device->depreciation_rate }}
             </div>
         </div>
