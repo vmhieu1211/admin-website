@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
-use Spatie\Permission\Models\Role; 
+use Spatie\Permission\Models\Role;
 
 class PermissionController extends Controller
 {
@@ -16,7 +16,7 @@ class PermissionController extends Controller
         $this->middleware('permission:permission-edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:permission-create', ['only' => ['create']]);
     }
-    
+
 
     public function index(Request $request)
     {
@@ -27,9 +27,9 @@ class PermissionController extends Controller
 
     public function create()
     {
-        $roles =Role::get(); 
+        $roles = Role::get();
         $permissions = Permission::get();
-        return view('permissions.create', compact('permissions','roles'));
+        return view('permissions.create', compact('permissions', 'roles'));
     }
 
     public function store(Request $request)
@@ -59,7 +59,7 @@ class PermissionController extends Controller
         $permission = Permission::find($id);
         $permissions = Permission::get();
         $assignedRoles = $permission->roles->pluck('id')->toArray();
-        return view('permissions.edit', compact('permission','roles','assignedRoles'));
+        return view('permissions.edit', compact('permission', 'roles', 'assignedRoles'));
     }
 
     public function update(Request $request, $id)

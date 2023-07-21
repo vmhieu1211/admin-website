@@ -15,16 +15,16 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Products</th>
-            <th width="280px">Action</th>
+            <th>{{__('welcome.no')}}</th>
+            <th>{{__('welcome.user_name')}}</th>
+            <th>{{__('welcome.email')}}</th>
+            <th>{{__('welcome.role')}}</th>
+            <th>{{__('welcome.user_products')}}</th>
+            <th width="280px">{{__('welcome.action')}}</th>
         </tr>
         @foreach ($users as $user)
             <tr>
-                <td>{{ $user->id }}</td>
+                <td>{{ ++$i }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>
@@ -45,16 +45,16 @@
                 </td>
                 <td>
                     <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('users.show', $user->id) }}">Show</a>
+                        <a class="btn btn-info" href="{{ route('users.show', $user->id) }}">{{__('welcome.show')}}</a>
                         @can('user-edit')
-                            <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">Edit</a>
+                            <a class="btn btn-primary" href="{{ route('users.edit', $user->id) }}">{{__('welcome.edit')}}</a>
                         @endcan
 
                         @can('user-delete')
                             <form action="{{ route('users.destroy', $user->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="submit" class="btn btn-danger">{{__('welcome.delete')}}</button>
                             </form>
                         @endcan
                     </form>

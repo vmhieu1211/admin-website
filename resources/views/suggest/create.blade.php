@@ -7,7 +7,7 @@
                 <h2>Add New Suggest</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('suggests.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('suggests.index') }}">{{__('welcome.back')}}</a>
             </div>
         </div>
     </div>

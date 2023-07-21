@@ -7,7 +7,7 @@
                 <h2>Edit Product</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('products.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('products.index') }}"> {{__('welcome.back')}}</a>
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>{{__('welcome.product_name')}}:</strong>
                     <input type="text" name="name" value="{{ $product->name }}" class="form-control"
                         placeholder="Name">
                 </div>
@@ -54,7 +54,7 @@
                 <img id="holder" style="margin-top:15px;max-height:100px;">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">{{__('welcome.submit')}}</button>
             </div>
         </div>
     </form>

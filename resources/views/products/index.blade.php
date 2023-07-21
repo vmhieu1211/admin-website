@@ -57,7 +57,8 @@
             <th>Date</th>
             <th>Author</th>
             <th>Image used</th>
-            <th width="280px">Action</th>
+            <th width="280px">{{ __('welcome.action') }}</th>
+
         </tr>
         @foreach ($products as $product)
             <tr>
@@ -85,7 +86,7 @@
                     <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                         <a class="btn btn-info" href="{{ route('products.show', $product->id) }}">Show</a>
                         {{-- @can('product-edit') --}}
-                            <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
                         {{-- @endcan --}}
 
                         @can('product-delete')

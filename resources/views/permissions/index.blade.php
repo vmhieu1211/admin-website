@@ -17,10 +17,10 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>Name</th>
-            <th>Role Name</th>
-            <th width="280px">Action</th>
+            <th>{{__('welcome.no')}}</th>
+            <th>{{__('welcome.permission_name')}}</th>
+            <th>{{__('welcome.role_name')}}</th>
+            <th width="280px">{{__('welcome.action')}}</th>
         </tr>
 
         @foreach ($permissions as $key => $permission)
@@ -33,15 +33,15 @@
                     @endforeach
                 </td>
                 <td>
-                    <a class="btn btn-info" href="{{ route('permissions.show', $permission->id) }}">Show</a>
+                    <a class="btn btn-info" href="{{ route('permissions.show', $permission->id) }}">{{__('welcome.show')}}</a>
                     @can('permission-edit')
-                    <a class="btn btn-primary" href="{{ route('permissions.edit', $permission->id) }}">Edit</a>
+                    <a class="btn btn-primary" href="{{ route('permissions.edit', $permission->id) }}">{{__('welcome.edit')}}</a>
                     @endcan
                     @can('permission-delete')
                     <form method="POST" action="{{ route('permissions.destroy', $permission->id) }}" style="display:inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">{{__('welcome.delete')}}</button>
                     </form>
                     @endcan
                 </td>

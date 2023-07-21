@@ -43,14 +43,13 @@
                 <td>{{ $device->personDelivery->name }}</td>
                 <td>{{ $device->depreciation_rate }}</td>
                 <td>{{ ($device->money * $device->depreciation_rate) / 100 }}</td>
-
                 <td>
                     <form action="{{ route('devices.destroy', $device->id) }}" method="POST">
-                        <a class="btn btn-info" href="{{ route('devices.show', $device->id) }}">Show</a>
-                        <a class="btn btn-primary" href="{{ route('devices.edit', $device->id) }}">Edit</a>
+                        <a class="btn btn-info" href="{{ route('devices.show', $device->id) }}">{{ __('welcome.show') }}</a>
+                        <a class="btn btn-primary" href="{{ route('devices.edit', $device->id) }}">{{ __('welcome.edit') }}</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">{{ __('welcome.delete') }}</button>
                     </form>
                 </td>
             </tr>

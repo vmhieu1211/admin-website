@@ -5,7 +5,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Quản trị Website</div>
+        <div class="sidebar-brand-text mx-3">{{__('welcome.title')}}</div>
     </a>
 
     <!-- Divider -->
@@ -25,12 +25,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
             aria-expanded="true" aria-controls="collapseUser">
             <i class="fas fa-fw fa-cog"></i>
-            <span>User</span>
+            <span>{{__('welcome.user')}}</span>
         </a>
         <div id="collapseUser" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('users.index') }}">Danh sách User</a>
-                <a class="collapse-item" href="{{ route('users.create') }}">Tạo mới User</a>
+                <a class="collapse-item" href="{{ route('users.index') }}">{{__('welcome.user_list')}}</a>
+                <a class="collapse-item" href="{{ route('users.create') }}">{{__('welcome.user_create')}}</a>
             </div>
         </div>
     </li>
@@ -39,12 +39,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRole"
             aria-expanded="true" aria-controls="collapseRole">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Roles</span>
+            <span>{{__('welcome.role')}}</span>
         </a>
         <div id="collapseRole" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('roles.index') }}">Danh sách Role</a>
-                <a class="collapse-item" href="{{ route('roles.create') }}">Tạo mới Role</a>
+                <a class="collapse-item" href="{{ route('roles.index') }}">{{__('welcome.role_list')}}</a>
+                <a class="collapse-item" href="{{ route('roles.create') }}">{{__('welcome.role_create')}}</a>
             </div>
         </div>
     </li>
@@ -54,12 +54,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePermission"
             aria-expanded="true" aria-controls="collapsePermission">
             <i class="fas fa-fw fa-cog"></i>
-            <span>Permission</span>
+            <span>{{__('welcome.permission')}}</span>
         </a>
         <div id="collapsePermission" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('permissions.index') }}">Danh sách Permission</a>
-                <a class="collapse-item" href="{{ route('permissions.create') }}">Tạo mới Permission</a>
+                <a class="collapse-item" href="{{ route('permissions.index') }}">{{__('welcome.permission_list')}}</a>
+                <a class="collapse-item" href="{{ route('permissions.create') }}">{{__('welcome.permission_create')}}</a>
             </div>
         </div>
     </li>
@@ -68,12 +68,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProduct"
             aria-expanded="true" aria-controls="collapseProduct">
             <i class="fas fa-fw fa-list"></i>
-            <span>Sản phẩm</span>
+            <span>{{__('welcome.product')}}</span>
         </a>
         <div id="collapseProduct" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('products.index') }}">Danh sách Sản phẩm</a>
-                <a class="collapse-item" href="{{ route('products.create') }}">Tạo mới Sản phẩm</a>
+                <a class="collapse-item" href="{{ route('products.index') }}">{{__('welcome.product_list')}}</a>
+                <a class="collapse-item" href="{{ route('products.create') }}">{{__('welcome.product_create')}}</a>
 
             </div>
         </div>
@@ -83,12 +83,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSuggest"
             aria-expanded="true" aria-controls="collapseSuggest">
             <i class="fas fa-fw fa-list"></i>
-            <span>Quản lý đề xuất</span>
+            <span>{{__('welcome.suggest')}}</span>
         </a>
         <div id="collapseSuggest" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('suggests.index') }}">Danh sách đề xuất</a>
-                <a class="collapse-item" href="{{ route('suggests.create') }}">Tạo mới đề xuất</a>
+                <a class="collapse-item" href="{{ route('suggests.index') }}">{{__('welcome.suggest_list')}}</a>
+                <a class="collapse-item" href="{{ route('suggests.create') }}">{{__('welcome.suggest_create')}}</a>
 
             </div>
         </div>
@@ -98,12 +98,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDevice"
             aria-expanded="true" aria-controls="collapseDevice" >
             <i class="fas fa-fw fa-list"></i>
-            <span>Quản lý thiết bị</>
+            <span>{{__('welcome.device')}}</>
         </a>
         <div id="collapseDevice" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('devices.index') }}">Danh sách thiết bị</a>
-                <a class="collapse-item" href="{{ route('devices.create') }}">Tạo mới thiết bị</a>
+                <a class="collapse-item" href="{{ route('devices.index') }}">{{__('welcome.device_list')}}</a>
+                <a class="collapse-item" href="{{ route('devices.create') }}">{{__('welcome.device_create')}}</a>
 
             </div>
         </div>

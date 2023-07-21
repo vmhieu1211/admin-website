@@ -14,10 +14,11 @@
         @endif
         <table class="table table-bordered">
             <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Permission</th>
-                <th width="280px">Action</th>
+                <th>{{ __('welcome.no') }}</th>
+                <th>{{ __('welcome.role_name') }}</th>
+                <th>{{ __('welcome.permission') }}</th>
+                <th width="280px">{{ __('welcome.action') }}</th>
+
             </tr>
 
             @foreach ($roles as $key => $role)
@@ -32,14 +33,18 @@
                         @endif
                     </td>
                     <td>
-                        <a class="btn btn-info" href="{{ route('roles.show', $role->id) }}">Show</a>
-
-                        <a class="btn btn-primary" href="{{ route('roles.edit', $role->id) }}">Edit</a>
-
-                        {!! Form::open(['method' => 'DELETE', 'route' => ['roles.destroy', $role->id], 'style' => 'display:inline']) !!}
-                        {!! Form::submit('Delete', ['class' => 'btn btn-danger']) !!}
-                        {!! Form::close() !!}
-
+                        <a class="btn btn-info" href="{{ route('roles.show', $role->id) }}">{{__('welcome.show')}}</a>
+                        @can('role-edit')
+                            <a class="btn btn-primary" href="{{ route('roles.edit', $role->id) }}">{{__('welcome.edit')}}</a>
+                        @endcan
+                        @can('role-delete')
+                            <form method="POST" action="{{ route('roles.destroy', $role->id) }}"
+                                style="display:inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">{{__('welcome.delete')}}</button>
+                            </form>
+                        @endcan
                     </td>
                 </tr>
             @endforeach

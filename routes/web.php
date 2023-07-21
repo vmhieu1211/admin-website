@@ -8,6 +8,8 @@ use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\SuggestController;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 
 
@@ -45,4 +47,13 @@ Route::middleware(['CheckLogin'])->group(function () {
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
-    });
+});
+
+Route::get('/lang/{locale}', function (string $locale) {
+    if (!in_array($locale, ['en', 'vi'])) {
+        abort(400);
+    }
+    App::setLocale($locale);
+    Session::put('locale', $locale);
+    return redirect()->back();
+});

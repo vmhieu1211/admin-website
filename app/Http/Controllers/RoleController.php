@@ -60,11 +60,13 @@ class RoleController extends Controller
 
     public function edit($id)
     {
-        $roles = Role::find($id);
+        $role = Role::find($id);
         $permission = Permission::get();
-        $rolePermissions = Role::find($id)->permissions()->pluck('id')->toArray();
+        $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id", $id)
+            ->pluck('role_has_permissions.role', 'role_has_permissions.permissions_id')
+            ->all();
 
-        return view('role.edit', compact('roles', 'permission', 'rolePermissions'));
+        return view('role.edit', compact('role', 'permission', 'rolePermissions'));
     }
 
     public function update(Request $request, $id)
@@ -73,11 +75,9 @@ class RoleController extends Controller
             'name' => 'required',
             'permission' => 'required',
         ]);
-
         $role = Role::find($id);
         $role->name = $request->input('name');
         $role->save();
-
         $role->syncPermissions($request->input('permission'));
 
         return redirect()->route('roles.index')

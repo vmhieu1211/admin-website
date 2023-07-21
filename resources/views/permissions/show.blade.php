@@ -7,7 +7,7 @@
                 <h2> Show Permission</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('permissions.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('permissions.index') }}">{{ __('welcome.back') }}</a>
             </div>
         </div>
     </div>

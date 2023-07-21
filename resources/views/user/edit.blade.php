@@ -31,25 +31,25 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>{{__('welcome.user_name')}}:</strong>
                     <input type="text" name="name" value="{{ $user->name }}" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Email:</strong>
+                    <strong>{{__('welcome.email')}}:</strong>
                     <input class="form-control" style="height:40px" name="email" placeholder="" value="{{ $user->email }}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Password:</strong>
+                    <strong>{{__('welcome.user_password')}}:</strong>
                     <input class="form-control" style="height:40px" name="password" placeholder="" value="{!!$user->password !!}">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
         <div class="form-group">
-            <strong>Role:</strong>
+            <strong>{{__('welcome.role')}}:</strong>
             {{-- <select multiple="multiple" name="sports[]" id="sports" class="form-control">
                 @foreach($role as $key => $roles)
                     @foreach($aItem->sports as $aItemKey => $aItemSport)

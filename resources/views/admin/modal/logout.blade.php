@@ -13,7 +13,7 @@
                 <form method="POST" action="">
                     @csrf
                     @if (Auth::check())
-                        <a class="btn btn-success" href="{{ route('logoutSubmit') }}"> Logout</a>
+                        <a class="btn btn-success" href="{{ route('logoutSubmit') }}">{{__('welcome.logout')}}</a>
                     @endif
                 </form>
             </div>

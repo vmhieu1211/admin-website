@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Quản trị Website</title>
+    <title>{{ __('welcome.title') }}</title>
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link
@@ -105,7 +105,7 @@
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('admin/js/sb-admin-2.min.js') }}"></script>
     <script src="{{ asset('admin/js/sb-admin-2.js') }}"></script>
-    
+
     <!-- Page level plugins -->
     <!-- <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script> -->
 

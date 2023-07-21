@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Manager Suggest</h2>
+                <h2></h2>
             </div>
         </div>
     </div>
@@ -27,7 +27,8 @@
             <th>Department Suggest</th>
             <th>Suggest Date</th>
             <th>Status</th>
-            <th width="280px">Action</th>
+            <th width="280px">{{__('welcome.action')}}</th>
+
         </tr>
         @foreach ($suggests as $suggests)
             <tr>
