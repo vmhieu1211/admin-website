@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Permissions Management</h2>
+                <h2></h2>
             </div>
             <div class="pull-right">
         </div>
