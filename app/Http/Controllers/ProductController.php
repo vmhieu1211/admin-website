@@ -35,12 +35,14 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+       
         $request->validate(
             [
                 'name' => 'required',
                 'detail' => 'required',
             ]
         );
+        // dd($request);
         $user = Auth::user();
         $product = new Product();
         $product->name = $request->name;

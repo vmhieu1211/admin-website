@@ -60,9 +60,10 @@
     </form>
 @endsection
 
+
 @push('scripts')
     <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
-    <script src="/vendor/laravel-filemanager/js/filemanager.js"></script>
+    <script src="/vendor/laravel-filemanager/js/filemanager.min.js"></script>
     <script>
         ClassicEditor
             .create(document.querySelector('#my-editor'))

@@ -23,6 +23,8 @@ return [
     'sell'=>'Sell',
     'using'=>'Using',
     'storage'=>'Storage',
+    'author' => 'Author',
+
 
 
 
@@ -51,6 +53,8 @@ return [
     'product_list' => 'Product List',
     'product_create' => 'Create New Product',
     'product_name'=>'Name',
+    'detail'=>'Detail',
+    'date'=>'Date',
 
     //suggest
     'suggest' => 'Suggest Management',
