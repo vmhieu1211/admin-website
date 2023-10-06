@@ -11,10 +11,10 @@
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                 <form method="POST" action="">
-                    @csrf
+                    {{-- @csrf
                     @if (Auth::check())
                         <a class="btn btn-success" href="{{ route('logoutSubmit') }}">{{__('welcome.logout')}}</a>
-                    @endif
+                    @endif --}}
                 </form>
             </div>
         </div>

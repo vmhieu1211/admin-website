@@ -28,22 +28,22 @@ Route::get('/layouts/index', function () {
     return view('layouts.index');
 })->name('layouts.index');
 
-// Route::get('/login', [LoginController::class, 'loginForm'])->name('login.submit');
-// Route::post('/login', [LoginController::class, 'loginSubmit'])->name('admin.handle.login');
+Route::get('/login', [LoginController::class, 'loginForm'])->name('login.submit');
+Route::post('/login', [LoginController::class, 'loginSubmit'])->name('admin.handle.login');
 
-// Route::group(['middleware' => 'CheckLogout'], function () {
-//     Route::get('/logout', [LoginController::class, 'loginForm'])->name('loginForm');
-//     Route::post('/logout', [LoginController::class, 'logoutSubmit'])->name('logoutSubmit');
-// });
+Route::group(['middleware' => 'CheckLogout'], function () {
+    Route::get('/logout', [LoginController::class, 'loginForm'])->name('loginForm');
+    Route::post('/logout', [LoginController::class, 'logoutSubmit'])->name('logoutSubmit');
+});
 
-// Route::middleware(['CheckLogin'])->group(function () {
+Route::middleware(['CheckLogin'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
     Route::resource('roles', RoleController::class);
     Route::resource('permissions', PermissionController::class);
     Route::resource('suggests', SuggestController::class);
     Route::resource('devices', DeviceController::class);
-// });
+});
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
