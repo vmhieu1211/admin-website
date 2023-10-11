@@ -7,7 +7,7 @@
                 <h2></h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('products.index') }}"> {{__('welcome.back')}}</a>
+                <a class="btn btn-primary" href="{{ route('products.index') }}"> {{ __('welcome.back') }}</a>
             </div>
         </div>
     </div>
@@ -30,14 +30,14 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>{{__('welcome.product_name')}}:</strong>
+                    <strong>{{ __('welcome.product_name') }}:</strong>
                     <input type="text" name="name" value="{{ $product->name }}" class="form-control"
                         placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>{{__('welcome.detail')}}:</strong>
+                    <strong>{{ __('welcome.detail') }}:</strong>
                     <textarea id="my-editor" class="form-control" style="height:150px" name="detail" placeholder="Detail">{!! $product->detail !!}</textarea>
 
                 </div>
@@ -45,8 +45,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <a id="lfm" data-input="images" data-preview="holder" class="btn btn-primary">
-                            <i class="fa fa-picture-o"></i> {{__('welcome.choose')}}
+                        <a id="my-editor" data-input="images" data-preview="holder" class="btn btn-primary">
+                            <i class="fa fa-picture-o"></i> {{ __('welcome.choose') }}
                         </a>
                     </span>
                     <input id="images" class="form-control" type="text" name="images">
@@ -54,9 +54,22 @@
                 <img id="holder" style="margin-top:15px;max-height:100px;">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">{{__('welcome.submit')}}</button>
+                <button type="submit" class="btn btn-primary">{{ __('welcome.submit') }}</button>
             </div>
         </div>
     </form>
+    @push('scripts')
+        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+        <script>
+            var options = {
+                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+            };
+        </script>
+        <script>
+            CKEDITOR.replace('my-editor', options);
+        </script>
+    @endpush
 @endsection
-

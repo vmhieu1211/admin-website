@@ -45,7 +45,7 @@ Route::middleware(['CheckLogin'])->group(function () {
     Route::resource('devices', DeviceController::class);
 });
 
-Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+Route::group(['prefix' => 'laravel-filemanager', 'middleware'], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 

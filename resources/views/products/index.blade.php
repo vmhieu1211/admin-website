@@ -101,5 +101,6 @@
             </tr>
         @endforeach
     </table>
+    
     {{-- {!! $products->links() !!} --}}
 @endsection
