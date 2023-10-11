@@ -58,9 +58,8 @@
             </div>
         </div>
     </form>
+   
 @endsection
-
-
 @push('scripts')
     <script>
         var options = {
@@ -73,4 +72,4 @@
     <script>
         CKEDITOR.replace('my-editor', options);
     </script>
-@endpush
+@endpush 
