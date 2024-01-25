@@ -10,12 +10,11 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function loginForm(){
-        // dd(22);
         return view('login.form_login');
     }
 
     public function loginSubmit(Request $request){
-        // dd($request->all());
+
         $credentials = $request->validate([
             'email'=>"required|email",
             'password'=> 'required'

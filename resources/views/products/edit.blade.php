@@ -59,17 +59,13 @@
         </div>
     </form>
     @push('scripts')
-        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-        <script>
-            var options = {
-                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-            };
-        </script>
-        <script>
-            CKEDITOR.replace('my-editor', options);
-        </script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#my-editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
     @endpush
 @endsection

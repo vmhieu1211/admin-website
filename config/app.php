@@ -188,8 +188,6 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
-        'Permission' => Spatie\Permission\Facades\Permission::class,
-        'Image' => Intervention\Image\Facades\Image::class,
     ])->toArray(),
 
 ];
