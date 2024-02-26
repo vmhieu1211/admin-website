@@ -42,47 +42,24 @@
 
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <a id="lfm" data-input="images" data-preview="holder" class="btn btn-primary">
-                            <i class="fa fa-picture-o"></i> {{ __('welcome.choose') }}
-                        </a>
-                    </span>
-                    <input id="images" class="form-control" type="text" name="images">
-                </div>
-                <img id="holder" style="margin-top:15px;max-height:100px;">
-            </div>
+            <div class="input-group">
+                <span class="input-group-btn">
+                  <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                    <i class="fa fa-picture-o"></i> Choose
+                  </a>
+                </span>
+                <input id="thumbnail" class="form-control" type="text" name="images">
+              </div>
+              <div id="holder" style="margin-top:15px;max-height:100px;"></div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">{{ __('welcome.submit') }}</button>
             </div>
         </div>
     </form>
     @push('scripts')
-<<<<<<< HEAD
-        <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
-        <script>
-            ClassicEditor
-                .create(document.querySelector('#editor'))
-                .catch(error => {
-                    console.error(error);
-                });
-        </script>
-
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
-        <script>
-            $('a.my-editor').ckeditor(options);
-        </script>
-=======
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
     <script>
-        ClassicEditor
-            .create( document.querySelector( '#my-editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
+       $('#lfm').filemanager('images');
     </script>
->>>>>>> 4480045766cc2267816210848a50521ed71d9135
     @endpush
 @endsection

@@ -19,7 +19,7 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     @stack('stylesheet')
     <!-- day code css tu view con ra day -->
 </head>
@@ -103,8 +103,8 @@
     <script src="{{ asset('admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
- 
-    <script src="{{ asset('admin/js/sb-admin-2.js') }}"></script> 
+
+    <script src="{{ asset('admin/js/sb-admin-2.js') }}"></script>
 
     <!-- Page level plugins -->
     <!-- <script src="{{ asset('admin/vendor/chart.js/Chart.min.js') }}"></script> -->

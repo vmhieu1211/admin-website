@@ -43,8 +43,12 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="input-group">
-                    <input type="button" id="lfm" data-input="thumbnail" data-preview="holder" value="Upload">
-                    <input id="thumbnail" class="form-control" type="text" name="filepath">
+                    <span class="input-group-btn">
+                        <a id="lfm" data-input="images" data-preview="holder" class="btn btn-primary">
+                            <i class="fa fa-picture-o"></i> {{ __('welcome.choose') }}
+                        </a>
+                    </span>
+                    <input id="images" class="form-control" type="text" name="images">
                 </div>
                 <img id="holder" style="margin-top:15px;max-height:100px;">
             </div>
@@ -54,19 +58,20 @@
             </div>
         </div>
     </form>
-@push('scripts')
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
-    <script>
-        ClassicEditor
-            .create( document.querySelector( '#my-editor' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
-    <script src="{{ asset('vendor/laravel-filemanager/js/file-manager.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $('#lfm').filemanager('image');
-    </script>
+    @push('scripts')
+        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+        <script>
+            var options = {
+                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+            };
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+        <script>
+            $('textarea.my-editor').ckeditor(options);
+        </script>
     @endpush
-    @endsection
+@endsection
