@@ -38,14 +38,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>{{ __('welcome.detail') }}:</strong>
-                    <textarea id="my-editor" class="form-control" style="height:150px" name="detail" placeholder="Detail">{!! $product->detail !!}</textarea>
+                    <textarea id="editor" class="form-control" style="height:150px" name="detail" placeholder="Detail">{!! $product->detail !!}</textarea>
 
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="input-group">
                     <span class="input-group-btn">
-                        <a id="my-editor" data-input="images" data-preview="holder" class="btn btn-primary">
+                        <a id="lfm" data-input="images" data-preview="holder" class="btn btn-primary">
                             <i class="fa fa-picture-o"></i> {{ __('welcome.choose') }}
                         </a>
                     </span>
@@ -59,17 +59,19 @@
         </div>
     </form>
     @push('scripts')
-        <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
         <script>
-            var options = {
-                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-            };
+            ClassicEditor
+                .create(document.querySelector('#editor'))
+                .catch(error => {
+                    console.error(error);
+                });
         </script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
         <script>
-            CKEDITOR.replace('my-editor', options);
+            $('a.my-editor').ckeditor(options);
         </script>
     @endpush
 @endsection

@@ -34,7 +34,7 @@
                         @endforeach
                     @endif
                 </td>
-                {{-- <td>
+                <td>
                     @if ($user->products->isNotEmpty())
                         @foreach ($user->products as $product)
                             <p>{{ $product->name }}</p>
@@ -42,7 +42,7 @@
                     @else
                         <p>No products</p>
                     @endif
-                </td> --}}
+                </td>
                 <td>
                     <form action="{{ route('users.destroy', $user->id) }}" method="POST">
                         <a class="btn btn-info" href="{{ route('users.show', $user->id) }}">{{__('welcome.show')}}</a>

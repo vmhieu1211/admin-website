@@ -1,5 +1,4 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('layouts.index') }}">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -76,36 +75,6 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('products.index') }}">{{ __('welcome.product_list') }}</a>
                 <a class="collapse-item" href="{{ route('products.create') }}">{{ __('welcome.product_create') }}</a>
-
-            </div>
-        </div>
-    </li>
-
-    <li class="nav-item menu-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSuggest"
-            aria-expanded="true" aria-controls="collapseSuggest">
-            <i class="fas fa-fw fa-list"></i>
-            <span>{{ __('welcome.suggest') }}</span>
-        </a>
-        <div id="collapseSuggest" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('suggests.index') }}">{{ __('welcome.suggest_list') }}</a>
-                <a class="collapse-item" href="{{ route('suggests.create') }}">{{ __('welcome.suggest_create') }}</a>
-
-            </div>
-        </div>
-    </li>
-
-    <li class="nav-item menu-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDevice"
-            aria-expanded="true" aria-controls="collapseDevice">
-            <i class="fas fa-fw fa-list"></i>
-            <span>{{ __('welcome.device') }}</>
-        </a>
-        <div id="collapseDevice" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{{ route('devices.index') }}">{{ __('welcome.device_list') }}</a>
-                <a class="collapse-item" href="{{ route('devices.create') }}">{{ __('welcome.device_create') }}</a>
 
             </div>
         </div>
