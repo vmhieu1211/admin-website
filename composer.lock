@@ -5809,6 +5809,7 @@
         },
         {
             "name": "unisharp/laravel-filemanager",
+<<<<<<< HEAD
             "version": "v2.7.0",
             "source": {
                 "type": "git",
@@ -5819,6 +5820,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/6e79e4e59add5aa365df97c67ea8a0142c15918c",
                 "reference": "6e79e4e59add5aa365df97c67ea8a0142c15918c",
+=======
+            "version": "v2.6.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/UniSharp/laravel-filemanager.git",
+                "reference": "6c8306d4cca0b2682f9f54f8857a32f7450adac4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/UniSharp/laravel-filemanager/zipball/6c8306d4cca0b2682f9f54f8857a32f7450adac4",
+                "reference": "6c8306d4cca0b2682f9f54f8857a32f7450adac4",
+>>>>>>> 4480045766cc2267816210848a50521ed71d9135
                 "shasum": ""
             },
             "require": {
@@ -5829,7 +5842,11 @@
                 "illuminate/filesystem": "5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
                 "illuminate/http": "5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
                 "illuminate/support": "5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+<<<<<<< HEAD
                 "intervention/image": ">=2.0.0",
+=======
+                "intervention/image": "2.*",
+>>>>>>> 4480045766cc2267816210848a50521ed71d9135
                 "league/flysystem": ">=2.0.0",
                 "php": ">=7.2.0"
             },
@@ -5883,9 +5900,15 @@
             ],
             "support": {
                 "issues": "https://github.com/UniSharp/laravel-filemanager/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/UniSharp/laravel-filemanager/tree/v2.7.0"
             },
             "time": "2024-02-07T07:42:57+00:00"
+=======
+                "source": "https://github.com/UniSharp/laravel-filemanager/tree/v2.6.4"
+            },
+            "time": "2023-11-24T08:18:55+00:00"
+>>>>>>> 4480045766cc2267816210848a50521ed71d9135
         },
         {
             "name": "vlucas/phpdotenv",

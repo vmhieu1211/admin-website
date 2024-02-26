@@ -59,6 +59,7 @@
         </div>
     </form>
     @push('scripts')
+<<<<<<< HEAD
         <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
         <script>
             ClassicEditor
@@ -73,5 +74,15 @@
         <script>
             $('a.my-editor').ckeditor(options);
         </script>
+=======
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#my-editor' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+>>>>>>> 4480045766cc2267816210848a50521ed71d9135
     @endpush
 @endsection
